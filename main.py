@@ -18,8 +18,9 @@ def fetch_data():
     data = api.db.child("votre_noeud").get()  # Exemple de récupération de données depuis la base
     print(data.val())
 
+
 # Par exemple, ajouter un bouton pour récupérer les données
-button = ctk.CTkButton(api.app, text="Récupérer Données", command=fetch_data)
+button = ctk.CTkButton(api, text="Récupérer Données", command=fetch_data)
 button.pack(pady=10)
 
 

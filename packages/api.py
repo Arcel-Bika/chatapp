@@ -1,10 +1,15 @@
-import pyrebase
+import os
 
+import pyrebase
+from dotenv import load_dotenv
+
+
+load_dotenv()
 config = {
-    "apiKey": "VOTRE_API_KEY",
-    "authDomain": "VOTRE_PROJET.firebaseapp.com",
-    "databaseURL": "https://VOTRE_PROJET.firebaseio.com",
-    "storageBucket": "VOTRE_PROJET.appspot.com",
+    "apiKey": os.getenv("MY_API_KEY"),
+    "authDomain": os.getenv("project"),
+    "databaseURL": os.getenv("db"),
+    "storageBucket": os.getenv("stock"),
 }
 
 firebase = pyrebase.initialize_app(config)
