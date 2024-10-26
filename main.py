@@ -55,16 +55,16 @@ def create_right_frame(root):
 
 # Créer la zone de chat avec la liste de messages et la zone de saisie
 def create_chat_area(frame):
-    chat_list = tk.Listbox(frame, bg="#282828", fg="white", selectbackground="#333333", activestyle="none")
+    chat_list = tk.Listbox(frame, bg="#282828", fg="white", selectbackground="#333333", font=("Arial", 16), activestyle="none")
     chat_list.insert(0, "Salut")
     chat_list.insert(1, "Comment tu vas ?")
     chat_list.pack(fill="both", expand=True, padx=5, pady=(5, 0))
 
     message_var = tk.StringVar()
-    message_entry = tk.Entry(frame, textvariable=message_var, bg="#333333", fg="white")
+    message_entry = tk.Entry(frame, textvariable=message_var, bg="#333333", fg="white", font=("Arial", 16))
     message_entry.pack(fill="x", padx=5, pady=5)
 
-    send_button = ctk.CTkButton(frame, text="Envoyer", command=None)  # Remplacer `command` par la fonction d'envoi
+    send_button = ctk.CTkButton(frame, text="Envoyer", font=("Arial", 18), command=None)  # Remplacer `command` par la fonction d'envoi
     send_button.pack(fill="x", padx=5, pady=5)
 
 
